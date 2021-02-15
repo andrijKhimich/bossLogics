@@ -1,0 +1,36 @@
+.metters {
+  &-section {
+    padding: 85px 0;
+    @include d(1500) {
+      padding: 60px 0;
+    }
+    @include d(1200) {
+      padding: 40px 0;
+    }
+    .section-title {
+      margin-bottom: 90px;
+      text-align: center;
+      @include d(1500) {
+        margin-bottom: 50px;
+      }
+
+    }
+  }
+  &-card {
+    position: relative;
+    @include d(992) {
+      margin-bottom: 30px;
+    }
+    &__icon {
+      max-width: 70px;
+      margin-bottom: 23px;
+    }
+    .subtitle, & h4 {
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+    .text-list {
+      padding-top: 0;
+    }
+  }
+}

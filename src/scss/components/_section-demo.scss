@@ -1,0 +1,34 @@
+.demo {
+  &-section {
+    padding-top: 210px;
+    padding-bottom: 175px;
+    overflow: visible;
+    @include d(1500) {
+      padding-top: 80px;
+      padding-bottom: 95px;  
+    }
+    .abstract {
+      right: -20px;
+      bottom: -240px;
+      max-width: 960px;
+      width: 50vw;
+    }
+  }
+  &__img {
+    max-width: 712px;
+    margin: 0 auto;
+  }
+  &__content {
+    padding-top: 110px;
+    @include d(1200) {
+      padding-top: 40px;
+    }
+    .button {
+      margin-top: 70px;
+      align-self: flex-start;
+      @include d(1200) {
+        margin-top: 50px;
+      }
+    }
+  }
+}

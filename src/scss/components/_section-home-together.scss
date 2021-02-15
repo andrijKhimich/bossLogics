@@ -1,0 +1,29 @@
+.home-section-together {
+  padding-bottom: 140px;
+  @include d(1500) {
+    padding-bottom: 80px;
+  }
+  @include d(1200) {
+    padding-bottom: 60px;
+  }
+  @include d(768) {
+    padding-bottom: 20px;
+  } 
+  .home__content  {
+    @include d(1500) {
+      padding-top: 140px;
+    }
+    @include d(1200) {
+      padding-top: 120px;
+    }
+    @include d(768) {
+      padding-top: 100px;
+    } 
+  }
+  .abstract {
+    max-width: 1160px;
+    left: -40px;
+    top: -20px;
+    width: 60vw;
+  }
+}

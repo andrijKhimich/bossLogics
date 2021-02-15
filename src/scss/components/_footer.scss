@@ -1,0 +1,87 @@
+.footer {
+  background-color: $bg-dark;
+  position: relative;
+  z-index: 1;
+  padding-top: 70px;
+  &-logo {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $aqua;
+  }
+  &-link {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+  }
+  &-box {
+    @include d(1200) {
+      margin-bottom: 30px;
+    }
+    .title-5, & h5 {
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+    a, p, li {
+      color: $white;
+      font-size: 14px; 
+    }
+    &_logo {
+      padding-right: 80px;
+      @include d(1500) {
+        padding-right: 0;
+      }
+    }
+    &_form {
+      margin-left: 80px;
+      @include d(1500) {
+        margin-left: 0;
+      }
+    }
+  }
+}
+.footer-form {
+  margin-bottom: 20px;
+}
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .button {
+    width: 160px;
+    min-width: 160px;
+    margin-left: 30px;
+  }
+  input {
+    width: 100%;
+  }
+}
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-top: 1px solid $gray;
+  margin-top: 50px;
+  @include d(768) {
+    flex-direction: column-reverse;
+  }
+  ul {
+    padding-left: 30px;
+    @include d(768) {
+      padding-left: 0;
+    }
+    li {
+      display: inline-block;
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+  }
+  p, a {
+    color: $gray;
+    font-size: 14px;
+    @include d(768) {
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+}

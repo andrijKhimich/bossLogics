@@ -1,0 +1,36 @@
+.launch {  
+  &-section {
+    padding: 210px 0 100px 0;
+    @include d(1500) {
+      padding: 80px 0;
+    }
+    @include d(1200) {
+      padding: 60px 0; 
+    }
+    .decor {
+      top: 0;
+      left: -20%;
+      @include d(768) {
+        width: 100vw;
+      }
+    }
+    .page-article__content {
+      margin-right: -40px;
+      @include d(1200) {
+        margin-right: 0;
+      }
+    }
+  }
+  &__img {
+    margin-left: -100px;
+    @include d(1500) {
+      margin-left: -50px;
+    }
+    @include d(1200) {
+      margin-left: -20px;
+    }
+    @include d(992) {
+      margin-left: 0;
+    }
+  }
+}

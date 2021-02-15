@@ -1,0 +1,39 @@
+.how-work {
+  &-section {
+    padding: 70px 0;
+    @include d(992) {
+      padding: 40px 0;
+    }
+    .content {
+      padding-left: 25px;
+      p {
+        color: $gray;
+      }
+    }
+    .type__content-box {
+      p {
+        color: $black;
+      }
+
+    }
+    .decor {
+      max-width: 906px;
+      width: 44vw;
+      top: -4%;
+      left: 0;
+      @include d(768) {
+        width: 100vw;
+        top: 0;
+      }
+    }
+  }
+  &__img {
+    max-width: 500px;
+    margin: 0 auto;
+    padding-top: 90px;
+    @include d(768) {
+      margin-bottom: 40px;
+      padding-top: 50px;
+    }
+  }
+}

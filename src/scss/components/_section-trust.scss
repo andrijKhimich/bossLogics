@@ -1,0 +1,74 @@
+.trust {
+  &-section {
+    padding-top: 130px;
+    padding-bottom: 260px;
+
+    @include d(992) {
+      padding-top: 80px;
+      padding-bottom: 100px;
+    }
+
+    .decor {
+      max-width: 700px;
+      width: 50vw;
+      top: 0;
+      left: 0;
+      @include d(768) {
+        width: 100vw;
+
+      }
+    }
+  }
+
+  &__img {
+    max-width: 520px;
+
+    @include d(768) {
+      margin: 0 auto 40px auto;
+    }
+  }
+
+  &__content {
+    padding-top: 25px;
+
+    @include d(1200) {
+      padding-top: 0;
+    }
+
+    @include d(768) {
+      margin-bottom: 40px;
+    }
+
+    &-box {
+      margin-top: 45px;
+
+      .title-4,
+      h4 {
+        text-transform: uppercase;
+        color: $primary-color;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 18px;
+        color: $gray;
+      }
+    }
+
+    .section-title {
+      margin-bottom: 40px;
+
+      @include d(1500) {
+        margin-bottom: 30px;
+      }
+    }
+
+    p {
+      font-size: 21px;
+
+      @include d(1200) {
+        font-size: 18px;
+      }
+    }
+  }
+}

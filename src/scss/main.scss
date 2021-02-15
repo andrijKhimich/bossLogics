@@ -1,0 +1,68 @@
+@import "abstracts/mixins";
+
+// libs using in project, uncoment what you need
+@import "../libs/bootstrap/css/grid.css";
+// @import "../libs/scroller/li-scroller.css";
+// @import "../libs/slick_1.9.0/slick/slick.scss";
+// @import "../libs/mixitup/dist/style.css";
+// @import "../libs/slick_1.9.0/slick/slick-theme.scss";
+// @import "../libs/fancybox/dist/jquery.fancybox.min.css";
+// @import "../libs/roundSlider/roundslider.min.css";
+@import "../libs/odometer/themes/odometer-theme-default.css";
+@import "../libs/Magnific-Popup/dist/magnific-popup.css";
+// @import "../libs/select2/dist/css/select2.min.css";
+// @import "../libs/bootstrap/scss/bootstrap.scss";
+// @import "../libs/jquery-ui-1.12.1.custom/jquery-ui.min.css";
+
+// base styles for project
+@import "base/fonts";
+@import "base/base";
+@import "base/animation";
+@import "base/sprite-svg";
+
+// project components
+@import "components/header";
+@import "components/humburger";
+@import "components/footer";
+@import "components/sidebar";
+@import "components/modal";
+@import "components/section-home";
+@import "components/section-home-reverse";
+@import "components/section-type";
+@import "components/section-mean";
+@import "components/section-trust";
+@import "components/section-clients";
+@import "components/section-demo";
+@import "components/section-metters";
+@import "components/section-platform";
+@import "components/section-integrate";
+@import "components/section-how-work";
+@import "components/section-review";
+@import "components/section-together";
+@import "components/section-contact";
+@import "components/section-achivement";
+@import "components/section-team";
+@import "components/section-cta";
+@import "components/section-pricing";
+@import "components/section-pricing-review";
+@import "components/section-customers";
+@import "components/office-gallery";
+@import "components/section-home-together";
+@import "components/section-decor";
+@import "components/section-connect";
+@import "components/section-invite";
+@import "components/section-present";
+@import "components/section-together-integrate";
+@import "components/section-history";
+@import "components/section-launch";
+@import "components/section-solution";
+@import "components/section-challenge";
+@import "components/form-contact";
+@import "components/form-start";
+@import "components/article";
+@import "components/page-article";
+@import "components/video";
+
+// project pages
+@import "pages/index";
+@import "pages/blog";

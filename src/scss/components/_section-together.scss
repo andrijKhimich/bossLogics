@@ -1,0 +1,142 @@
+.together {
+  &-section {
+    padding: 200px 0;
+
+    .abstract {
+      max-width: 600px;
+      top: 80px;
+      left: -40px;
+    }
+
+    .content {
+      padding-top: 80px;
+
+      @include d(1500) {
+        padding-top: 60px;
+      }
+
+      p {
+        margin-right: 100px;
+
+        @include d(1500) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &__img {
+    max-width: 510px;
+  }
+
+  &-tab {
+
+    &__list {
+      display: inline-flex;
+      align-items: center;
+      margin-bottom: 20px;
+      border-bottom: 1px solid $gray-medium;
+
+      li {
+        text-align: center;
+        font-weight: 600;
+        cursor: pointer;
+        position: relative;
+        padding-bottom: 10px;
+        color: $gray-medium;
+        z-index: 10;
+
+        &:not(:last-child) {
+          margin-right: 50px;
+        }
+
+        &.active {
+          color: $primary-color;
+
+          &::before {
+            opacity: 1;
+          }
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 3px;
+          background-color: $primary-color;
+          left: 0;
+          bottom: -1px;
+          opacity: 0;
+          transition: opacity $hover-duration $timing;
+        }
+      }
+    }
+  }
+}
+
+.together-tab__item {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+}
+
+.tab-together__img {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 60px;
+  transform: translate(-50%, -50%);
+}
+
+.clients-vendors {
+  &__list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 -80px;
+
+    @include d(1199) {
+      margin: 0 -60px;
+    }
+
+    @include d(992) {
+      margin: 0 -20px;
+    }
+
+    li {
+      padding: 0 80px;
+      width: 25%;
+      flex: 0 0 25%;
+      @include d(1199) {
+        padding: 0 60px;
+      }
+
+      @include d(992) {
+        padding: 0 20px;
+      }
+
+      @include d(576) {
+        padding: 0 20px;
+        width: 50%;
+        flex: 0 0 50%;
+      }
+
+      img {
+        height: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+.customers{
+  &-section {
+    padding: 100px 0;
+    @include d(1200) {
+      padding: 60px 0;
+    }
+    @include d(992) {
+      padding: 40px 0;
+    }
+    .section-title {
+      margin-bottom: 70px;
+      text-align: center;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -30px;
+    justify-content: center;
+    @include d(1200) {
+      max-width: 80%;
+      margin: 0 auto;
+      justify-content: center;
+    }
+  }
+  &__item {
+    width: 360px;
+    height: 360px;
+
+    @include d(1500) {
+      width: 290px;
+      height: 290px;
+    }
+    @include d(768) {
+      margin: 0 auto; 
+    }
+  }
+  &-card {
+    border-radius: 5px;
+    background-color: $white;
+    box-shadow: 0px 0px 70px 0px rgba(6, 107, 150, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 330px;
+    height: 330px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: $white;
+      transition: opacity $hover-duration $timing;
+    }
+    &:hover {
+      &::before {
+        opacity: .3;
+      }
+    }
+    @include d(1500) {
+      width: 260px;
+      height: 260px;
+    }
+    @include d(768) {
+      margin: 0 auto; 
+    }
+    &__logo {
+      position: relative;
+      z-index: 1;
+      max-width: 90%;
+      margin: 0 auto;
+    }
+  }
+  &__title {
+    text-align: center;
+    max-width: 700px;
+    margin: 190px auto 0;
+    @include d(1500) {
+      margin: 140px auto 0;
+    }
+    @include d(1200) {
+      margin: 90px auto 0;
+    }
+    @include d(992) {
+      margin: 50px auto 0;
+    }
+    .title-3,
+    h3 {
+      font-size: 44px;
+      font-family: $font-medium;
+      margin-bottom: 30px;
+    }
+    p {
+      padding: 0 110px;
+      @include d(992) {
+        padding: 0 10px;
+      }
+    }
+    .btn-row {
+      margin-top: 30px;
+      justify-content: center;
+    }
+  }
+
+}

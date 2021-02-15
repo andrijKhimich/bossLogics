@@ -1,0 +1,95 @@
+.team {
+  &-section {
+    padding: 100px 0 60px;
+    @include d(1500) {
+      padding: 80px 0 40px; 
+    }
+    @include d(1200) {
+      padding: 60px 0 40px; 
+    }
+    .section-title {
+      max-width: 1000px;
+      margin: 0 auto 50px;
+      @include d(992) {
+        max-width: 100%;
+        margin: 0 auto 30px;
+      }
+      text-align: center;
+    }
+    .decor {
+      right: 0;
+      top: 0;
+      max-width: 907px;
+      width: 50vw;
+      @include d(768) {
+        width: 100vw;
+      }
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    // margin: 0 -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    @include d(768) {
+      margin-left:-5px;
+      margin-right: -5px;
+    }
+  }
+
+  &__card {
+    max-width: 25%;
+    flex: 1 0 25%;
+    padding: 10px;
+    margin-bottom: 20px;
+    @include d(1200) {
+      max-width: 33.33333%;
+      flex: 1 0 33.33333%;
+    } 
+    @include d(768) {
+      padding: 5px;
+      max-width: 50%;
+      flex: 1 0 50%;
+    }
+  }
+
+  &__img {
+    height: 360px;
+    @include d(576) {
+      height: 240px;
+    }
+    img {
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    padding: 25px 0;
+    @include d(576) {
+      padding: 20px 0;
+    }
+  }
+
+  &__name {
+    font-size: 20px;
+    font-family: $font-bold;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: $primary-color;
+    @include d(768) {
+      font-size: 18px;
+    }
+  }
+  &__position {
+    font-size: 18px;
+    color: $black;
+    @include d(768) {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.platform {
+  &-section {
+    padding: 293px 0;
+    @include d(1500) {
+      padding: 200px 0;
+    }
+    @include d(1200) {
+      padding: 120px 0;
+    }
+    @include d(992) {
+      padding: 80px 0;
+    }
+    @include d(768) {
+      padding: 60px 0;
+    }
+    .content {
+      @include d(768) {
+        margin-bottom: 50px;
+      }
+    }
+    .decor {
+      max-width: 820px;
+      width: 43vw;
+      top: 0;
+      right: 7%;
+      @include d(768) {
+        width: 100vw;
+        top: auto;
+        bottom: 0;
+      }
+    }
+  }
+
+  &__img {
+    margin-left: 20px;
+
+    @include d(1500) {
+      margin-left: 0;
+    }
+  }
+}

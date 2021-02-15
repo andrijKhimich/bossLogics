@@ -1,0 +1,19 @@
+.contact-home-section {
+  @include d(768) {
+    padding-bottom: 50px;
+  }
+  .abstract {
+    max-width: 1290px;
+  }
+}
+.contact__banner {
+  max-width: 490px;
+  margin-left: 70px;
+  padding-top: 30px;
+  @include d(1500) {
+    margin: 0 auto;
+  }
+  @include d(992) {
+    padding-top: 0;
+  }
+}

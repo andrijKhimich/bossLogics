@@ -1,0 +1,107 @@
+.article {
+  padding-bottom: 40px;
+
+  &-section {
+    padding-top: 250px;
+    padding-bottom: 120px;
+
+    @include d(1500) {
+      padding: 180px 0 100px 0;
+    }
+
+    @include d(1200) {
+      padding: 140px 0 80px 0;
+    }
+
+    @include d(768) {
+      padding: 120px 0 16px 0;
+    }
+  }
+
+  &-date {
+    font-size: 18px;
+    color: $primary-color;
+    text-align: right;
+    margin-top: 170px;
+    margin-bottom: 20px;
+
+    @include d(1199) {
+      margin-top: 100px;
+      margin-bottom: 10px;
+    }
+
+    @include d(992) {
+      margin-top: 60px;
+    }
+  }
+
+  .section-title {
+    margin-bottom: 44px;
+  }
+
+  p,
+  a {
+    font-size: 18px;
+
+    &:not(:last-of-type) {
+      margin-bottom: 29px;
+    }
+  }
+  a {
+    color: $primary-color;
+  }
+  .title-4,
+  h4 {
+    text-transform: uppercase;
+    margin-top: 100px;
+    margin-bottom: 33px;
+    @include d(1200) {
+      margin-top: 80px;
+    }
+    @include d(992) {
+      margin-top: 60px;
+    }
+  }
+  i {
+    list-style: initial;
+  }
+  .title-5,
+  h5 {
+    color: $black;
+    font-size: 20px;
+    margin-bottom: 32px;
+    line-height: 1.2em;
+  }
+
+  ul {
+    margin-top: 20px;
+
+    li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 18px;
+      margin-bottom: 10px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 9px;
+        left: 0;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: $primary-color;
+      }
+    }
+  }
+
+  ol {
+    counter-reset: my-counter;
+    li:before {
+      content: counter(my-counter, lower-alpha);
+      counter-increment: my-counter;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+  }
+}

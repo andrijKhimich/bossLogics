@@ -1,0 +1,219 @@
+.blog-home {
+  .abstract {}
+
+  .abstract_blog {
+    max-width: 80px;
+    z-index: 1;
+    left: -40px;
+    top: -20px;
+  }
+
+  .abstract_blog1 {
+    max-width: 670px;
+    left: -40px;
+    top: -20px;
+  }
+
+  .home__content {
+    padding-bottom: 60px;
+
+    @include d(1200) {
+      padding: 140px 0 80px 0;
+    }
+
+    @include d(991) {
+      padding: 100px 0 60px 0;
+    }
+  }
+}
+
+.blog {
+  &-row {
+    margin-bottom: 100px;
+
+    @include d(991) {
+      margin-bottom: 40px;
+    }
+
+    .title-2,
+    & h2 {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+  }
+
+  &-section {
+    padding-bottom: 100px;
+  }
+
+  &-banner {
+    border-radius: 5px;
+    overflow: hidden;
+    height: 500px;
+    width: 100%;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @include d(991) {
+      height: 360px;
+    }
+  }
+
+  &-card {
+    margin-bottom: 30px;
+
+    &__img {
+      display: block;
+      width: 100%;
+      height: 320px;
+      border-radius: 5px;
+      overflow: hidden;
+
+      img {
+        object-fit: cover;
+        height: 100%;
+      }
+
+    }
+
+    &__content {
+      padding: 20px 0;
+    }
+
+    &__date {
+      font-size: 14px;
+      color: $gray;
+    }
+
+    &__title {
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 20px;
+      transition: color $hover-duration $timing;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+}
+
+.page-numbers {
+  font-size: 14px;
+  font-weight: bold;
+  color: $gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px auto 0 auto;
+
+  li {
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+
+    span,
+    a {
+      display: flex;
+      align-items: center;
+      background-color: transparent;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      justify-content: center;
+      transition: color $hover-duration $timing, background-color $hover-duration $timing;
+
+      &:hover {
+        color: $primary-color;
+      }
+
+      &.current {
+        color: $white;
+        background-color: $primary-color;
+
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.blog-article {
+  padding: 80px 0;
+
+  @include d(991) {
+    padding: 60px 0;
+  }
+
+  @include d(767) {
+    padding: 40px 0;
+  }
+
+  p,
+  li {
+    font-size: 18px;
+    line-height: 1.72em;
+    margin-bottom: 10px;
+  }
+
+  img {
+    max-width: 580px;
+    width: auto;
+  }
+
+  li {
+    position: relative;
+    padding-left: 20px;
+
+    &::before {
+      content: "";
+      width: 5px;
+      height: 5px;
+      background-color: $primary-color;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 10px;
+    }
+  }
+
+  figure,
+  img {
+    margin: 20px auto;
+  }
+}
+
+.blog-details {
+  width: 160px;
+  position: absolute;
+  top: 300px;
+  right: -200px;
+  font-size: 12px;
+
+  &__box {
+    margin-bottom: 60px;
+  }
+
+  p {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+
+  a {
+    color: $primary-color;
+    font-weight: 600;
+  }
+
+  &__title {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+}

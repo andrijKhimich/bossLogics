@@ -1,0 +1,44 @@
+.cta {
+  &-section {
+    padding-top: 20px;
+    padding-bottom: 175px;
+    overflow: visible;
+    @include d(1500) {
+      padding-top: 80px;
+      padding-bottom: 95px;  
+    }
+    @include d(1200) {
+      padding-top: 60px;
+      padding-bottom: 80px;  
+    }
+    @include d(768) {
+      padding-top: 40px;
+      padding-bottom: 60px;  
+    }
+    .abstract {
+      left: -20px;
+      bottom: -240px;
+      max-width: 850px;
+      width: 50vw;
+      @include d(768) {
+        bottom: -100px;
+      }
+    }
+  }
+  &__img {
+    max-width: 712px;
+    margin: 0 auto;
+  }
+  &__content {
+    padding-top: 210px;
+    @include d(1200) {
+      padding-top: 40px;
+    }
+    @include d(768) {
+      text-align: center;
+    }
+    .button {
+      align-self: flex-start;
+    }
+  }
+}

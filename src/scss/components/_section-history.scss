@@ -1,0 +1,25 @@
+.history {  
+  &-section {
+    padding: 100px 0 100px 0;
+    .decor {
+      right: -20%;
+      top: 0;
+      max-width: 775px;
+      width: 50vw;
+      @include d(768) {
+        width: 100vw;
+        top: auto;
+        bottom: 0;
+      }
+    }
+  }
+  &__img {
+    max-width: 550px;
+    margin-right: 0;
+    margin-left: auto;
+  }
+  .page-article__content {
+    padding-top: 20px;
+  }
+
+}

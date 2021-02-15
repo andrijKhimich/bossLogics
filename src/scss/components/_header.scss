@@ -1,0 +1,191 @@
+.header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 35px 0;
+  z-index: 10;
+
+  .social-list {
+    @include d(992) {
+      position: absolute;
+      bottom: 20px;
+      opacity: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      transition: opacity $duration $timing, bottom $duration $timing;
+    }
+
+    &.open {
+      @include d(992) {
+        bottom: 40px;
+        opacity: 1;
+      }
+    }
+  }
+
+  &-row {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-content {
+    display: flex;
+    align-items: center;
+
+    @include d(992) {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background-color: $white;
+      top: 0;
+      left: -100%;
+      transition: left $duration $timing;
+    }
+
+    &.open {
+      @include d(992) {
+        left: 0;
+      }
+    }
+  }
+
+  &_inner {
+    .nav-list li {
+      &:before {
+        background-color: $black;
+      }
+      a {
+        color: $black;
+      }
+    }
+  
+
+    .svg-social {
+      fill: $primary-color;
+    }
+    .humburger-item {
+      background-color: $primary-color;
+    }
+  }
+}
+
+.logo {
+  max-width: 160px;
+  position: relative;
+  z-index: 10;
+
+  @include d(1200) {
+    max-width: 140px;
+  }
+
+  @include d(992) {
+    max-width: 100px;
+  }
+}
+
+.nav {
+  position: relative;
+  margin-right: 5px;
+
+  @include d(992) {
+    margin-right: 0;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity $duration $timing, top $duration $timing;
+  }
+
+  &.open {
+    @include d(992) {
+      top: 50%;
+      opacity: 1;
+    }
+  }
+
+  &-list {
+    li {
+      display: inline-block;
+      position: relative;
+      margin-right: 50px;
+
+      @include d(1500) {
+        margin-right: 30px;
+      }
+
+      @include d(1200) {
+        margin-right: 15px;
+      }
+
+      @include d(992) {
+        margin-right: 0;
+        display: block;
+        margin-bottom: 20px;
+      }
+
+      @include rh(992) {
+        &:hover {
+          &:before {
+            width: 100%;
+          }
+        }
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: $white;
+        transition: width $hover-duration $timing;
+      }
+
+      a {
+        color: $black;
+        font-size: 13px;
+        font-family: $font-medium;
+        text-transform: uppercase;
+
+        @include d(992) {
+          font-size: 16px;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+.social-list {
+
+  li {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    @include d(1200) {
+      width: 25px;
+    }
+
+    a {
+      padding: 5px;
+
+      .svg-social {
+        @include d(992) {
+          fill: $primary-color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.form__content {
+  max-width: 780px;
+  margin: 0 auto;
+  .button {
+    margin: 30px auto 0;
+    display: block;
+  }
+  .form-row {
+    @include d(768) {
+      flex-wrap: wrap;
+    }
+  }
+}
+.form-section {
+  padding-top: 20px;
+  padding-bottom: 100px;
+}

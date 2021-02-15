@@ -1,0 +1,48 @@
+.pricing-review {
+  &-section {
+    padding-top: 20px;
+    padding-bottom: 175px;
+    overflow: visible;
+
+    @include d(1500) {
+      padding-top: 80px;
+      padding-bottom: 95px;
+    }
+
+    @include d(1200) {
+      padding-top: 60px;
+      padding-bottom: 80px;
+    }
+
+    @include d(768) {
+      padding-top: 40px;
+      padding-bottom: 60px;
+    }
+
+    .abstract {
+      left: -20px;
+      bottom: -240px;
+      max-width: 850px;
+      width: 50vw;
+      z-index: 0;
+
+      @include d(768) {
+        bottom: -100px;
+      }
+    }
+    .review__content {
+      text-align: left;
+    }
+    .review__icon {
+      margin-left: 0;
+    }
+  }
+
+  &__img {
+    max-width: 480px;
+    margin: 0 auto;
+    @include d(768) {
+      margin-top: 50px;
+    }
+  }
+}
